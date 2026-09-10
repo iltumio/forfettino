@@ -5,6 +5,7 @@ import { LIMITE_FATTURATO, MAX_HISTORICAL_YEARS } from '../../lib/constants/fisc
 import { calcolaFiscale } from '../../lib/utils/calculations';
 import { calcolaContributiPrevidenziali, calcolaCoefficienteMedioAteco, getAliquotaImpostaSostitutiva, getInpsCalculationInput, getRegimeThresholdStatus } from '../../lib/utils/forfettario';
 import { Currency } from '../ui/Currency';
+import { ProssimeScadenze } from '../ui/ProssimeScadenze';
 
 // Accessible patterns for colorblind users
 const PATTERNS = [
@@ -417,6 +418,8 @@ export function Dashboard({ annoSelezionato, setAnnoSelezionato }: DashboardProp
           </div>
         </div>
       )}
+
+      <ProssimeScadenze />
 
       <div className="card" style={{ background: 'linear-gradient(135deg, var(--bg-card) 0%, rgba(4,120,87,0.1) 100%)' }}>
         <div className="grid-3" style={{ alignItems: 'center' }}>
